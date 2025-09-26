@@ -1,6 +1,8 @@
-@import "tailwindcss";
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   /* Light Mode Colors */
@@ -25,40 +27,13 @@
   --primary-700: #0369a1;
 }
 
-@theme {
-  /* Light Mode Theme */
-  --color-background: var(--background-light);
-  --color-foreground: var(--foreground-light);
-  --color-card: var(--card-light);
-  --color-muted: var(--muted-light);
-  --color-border: var(--border-light);
-  
-  /* Primary Colors */
-  --color-primary-50: var(--primary-50);
-  --color-primary-500: var(--primary-500);
-  --color-primary-600: var(--primary-600);
-  --color-primary-700: var(--primary-700);
-  
-  --font-sans: 'Inter', system-ui, sans-serif;
-  --font-display: 'Poppins', system-ui, sans-serif;
-}
-
-.dark {
-  /* Dark Mode Theme */
-  --color-background: var(--background-dark);
-  --color-foreground: var(--foreground-dark);
-  --color-card: var(--card-dark);
-  --color-muted: var(--muted-dark);
-  --color-border: var(--border-dark);
-}
-
 /* Base Styles */
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: var(--font-sans);
+  font-family: 'Inter', system-ui, sans-serif;
   background-color: var(--background-light);
   color: var(--foreground-light);
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -208,7 +183,7 @@ body {
 
 .dark .loading-spinner {
   border: 3px solid #334155;
-  border-top: 3px solid var(--primary-400);
+  border-top: 3px solid var(--primary-500);
 }
 
 @keyframes spin {
